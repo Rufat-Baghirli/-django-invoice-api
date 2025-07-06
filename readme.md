@@ -24,62 +24,16 @@ Authentication: DRF Simple JWT (JSON Web Token)
 
 API Endpoints
 
-Method
+The main API endpoints for this project are listed below:
 
-Endpoint
-
-Description
-
-Auth Required?
-
-GET
-
-/api/invoices/
-
-Returns a list of the authenticated user's invoices.
-
-Yes
-
-POST
-
-/api/invoices/
-
-Creates a new invoice and triggers background tasks.
-
-Yes
-
-GET
-
-/api/invoices/{invoice_id}/
-
-Retrieves a specific invoice.
-
-Yes (Owner only)
-
-GET
-
-/api/invoices/{invoice_id}/download/?token={token}
-
-Downloads the generated PDF file using a secure token.
-
-No (Token auth)
-
-POST
-
-/api/token/
-
-Obtains a new token pair (access and refresh).
-
-No
-
-POST
-
-/api/token/refresh/
-
-Refreshes an access token.
-
-No
-
+| Method | Endpoint                                             | Description                                        | Auth Required?    |
+|:-------|:-----------------------------------------------------|:---------------------------------------------------|:------------------|
+| `GET`  | `/api/invoices/`                                     | Returns a list of the authenticated user's invoices. | Yes               |
+| `POST` | `/api/invoices/`                                     | Creates a new invoice and triggers background tasks. | Yes               |
+| `GET`  | `/api/invoices/{invoice_id}/`                        | Retrieves a specific invoice.                      | Yes (Owner only)  |
+| `GET`  | `/api/invoices/{invoice_id}/download/?token={token}` | Downloads the generated PDF file using a secure token. | No (Token auth)   |
+| `POST` | `/api/token/`                                        | Obtains a new token pair (access and refresh).     | No                |
+| `POST` | `/api/token/refresh/`                                | Refreshes an access token.                         | No                |
 
 
 Local Setup and Installation
