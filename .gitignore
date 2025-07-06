@@ -1,0 +1,44 @@
+# This file specifies intentionally untracked files that Git should ignore.
+
+# Virtual Environments
+# ------------------------------------------------------------------------------
+venv/
+env/
+.venv/
+.env/
+
+# Python artifacts
+# ------------------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+.Python
+
+# Databases
+# ------------------------------------------------------------------------------
+db.sqlite3
+db.sqlite3-journal
+
+# IDE and Editor Settings (PyCharm, VSCode)
+# ------------------------------------------------------------------------------
+.idea/
+.vscode/
+
+# Django generated files
+# ------------------------------------------------------------------------------
+*.log
+local_settings.py
+
+# Static and Media files
+# These folders are typically generated on the server during deployment.
+# We commit the source static files inside app directories, but not the collected ones.
+# ------------------------------------------------------------------------------
+/media/
+/staticfiles/
+
+# Environment Variables & Secrets (For security!)
+# ------------------------------------------------------------------------------
+.env
+.env.*
